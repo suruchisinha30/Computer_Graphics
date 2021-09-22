@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int x=0, y=0;
+    float m, x1, x2, y1, y2;
+    
+    printf("Enter the points x1 and y1 \n");
+    scanf("%f %f", &x1 , &y1);
+    
+    printf("Enter the points x2 and y2 \n");
+    scanf("%f %f", &x2 , &y2);
+    
+    printf("\n");
+    m= (y2-y1) / (x2-x1);
+    
+    for (x= x1 + 1; x<x2; x++)
+    {
+        y = m*(x-x1)+y1;
+        
+        printf("%d %d \n", x, y);
+    }
+    return 0;
+}
